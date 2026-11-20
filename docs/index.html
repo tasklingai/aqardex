@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-src https://skylineindex.com https://cranescore.com https://myunitworth.com; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>AqarDex Widgets</title>
+  <meta name="description" content="Free, live Dubai property data widgets from AqarDex: Skyline Index market pulse, CraneScore off-plan progress and My Unit Worth seller benchmarks. Copy one iframe and embed.">
+  <link rel="canonical" href="https://tasklingai.github.io/aqardex/">
+  <meta property="og:title" content="AqarDex Widgets">
+  <meta property="og:description" content="Free, live Dubai property data widgets built on Dubai Land Department open data.">
+  <meta property="og:url" content="https://tasklingai.github.io/aqardex/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="https://aqardex.com">AqarDex</a>
+      <nav aria-label="Products">
+        <a href="https://skylineindex.com">Skyline Index</a>
+        <a href="https://cranescore.com">CraneScore</a>
+        <a href="https://myunitworth.com">My Unit Worth</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>Free Dubai property data widgets</h1>
+      <p>Live tables built on Dubai Land Department open data. Pick a widget, copy one
+        <code>&lt;iframe&gt;</code> and paste it into your blog, brokerage site or article. The
+        widget updates itself; there is nothing to maintain.</p>
+    </section>
+
+    <section class="builder" aria-labelledby="builder-title">
+      <h2 id="builder-title">Build your widget</h2>
+      <div class="controls">
+        <label>Product
+          <select id="product"></select>
+        </label>
+        <label>Table
+          <select id="dataset"></select>
+        </label>
+        <label>Language
+          <select id="lang"></select>
+        </label>
+      </div>
+
+      <div class="code">
+        <div class="code-head">
+          <span>Embed code</span>
+          <button type="button" id="copy">Copy code</button>
+        </div>
+        <textarea id="snippet" readonly rows="7" spellcheck="false" aria-label="Embed code"></textarea>
+        <p class="hint" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <h3>Live preview</h3>
+      <div id="preview" class="preview"></div>
+    </section>
+
+    <section class="products" aria-labelledby="products-title">
+      <h2 id="products-title">The products behind the widgets</h2>
+      <div class="cards">
+        <a class="card" href="https://skylineindex.com">
+          <strong>Skyline Index</strong>
+          <span>Explore sales prices and rents by area, project and building.</span>
+        </a>
+        <a class="card" href="https://cranescore.com">
+          <strong>CraneScore</strong>
+          <span>Explore Dubai's developments under construction using Dubai Land Department records.</span>
+        </a>
+        <a class="card" href="https://myunitworth.com">
+          <strong>My Unit Worth</strong>
+          <span>Explore a home's estimated value using registered sales nearby.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="terms" aria-labelledby="terms-title">
+      <h2 id="terms-title">Terms of use</h2>
+      <ul>
+        <li>Free for any website, commercial or not.</li>
+        <li>Keep the "Source:" line and its link under the widget, and do not crop the widget's own credit.</li>
+        <li>Do not change the figures or present them as your own data.</li>
+        <li>No scraping or high-volume calls. For bulk data write to <a href="mailto:mail@aqardex.com">mail@aqardex.com</a>.</li>
+        <li>Figures are derived estimates and aggregates, not a valuation or financial advice.</li>
+      </ul>
+      <p>The widget is a cross-origin iframe: it cannot read or change your page, and the snippet adds no script to it.
+        Full terms and source: <a href="https://github.com/tasklingai/aqardex">github.com/tasklingai/aqardex</a>.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a href="https://aqardex.com">aqardex.com</a> · <a href="mailto:press@aqardex.com">press@aqardex.com</a> ·
+      AqarDex is a product of <a href="https://taskling.ai">Taskling LLC</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
